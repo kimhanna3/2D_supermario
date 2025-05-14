@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/hannahkim/Desktop/Hannah/!Grinnell/Spring 2025/CSC 161/final_project",
+      "program": "/Users/hannahkim/Desktop/Hannah/!Grinnell/Spring 2025/CSC 161/final_project/build/Debug/outDebug"
+    }
+  ]
+}
