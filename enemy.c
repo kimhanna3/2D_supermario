@@ -3,6 +3,7 @@
 #include "ncurses.h"
 #include "map.h"
 
+// Initialize an enemy's position, movement direction, and status
 void enemy_init(enemy_t* e, int x, int y, int dir) {
     e->x = x;
     e->y = y;
@@ -10,6 +11,7 @@ void enemy_init(enemy_t* e, int x, int y, int dir) {
     e->alive = true;
 }
 
+// Update enemy position each frame
 void enemy_update(enemy_t* e, map_t* map) {
     if (!e->alive) return;
 
@@ -24,6 +26,7 @@ void enemy_update(enemy_t* e, map_t* map) {
     }
 }
 
+// Draw the enemy character on screen using the viewport offset
 void enemy_draw(enemy_t* e, coord_t viewport) {
     if (!e->alive) return;
 

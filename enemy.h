@@ -1,11 +1,12 @@
 #pragma once
 
-#include "map.h"
+#include "map.h" // Required for coord_t and map_t used in function signatures
 
+// Structure representing an enemy in the game
 typedef struct {
-    int x, y;         // current position
+    int x, y;         // current position (x = horizontal, y = vertical)
     int direction;    // +1 (right) or -1 (left)
-    bool alive;       // allow future expansion (death, respawn)
+    bool alive;       // Flag to indicate if the enemy is active (used for future logic like death)
 } enemy_t;
 
 #define MAX_ENEMIES 10
