@@ -9,7 +9,7 @@
 #include "assets.h"
 #include "enemy.h"
 
-#define FRAME_RATE 30
+#define FRAME_RATE 15
 #define MAX_FALL_SPEED 3
 #define ENEMY_UPDATE_INTERVAL 10
 
@@ -79,8 +79,13 @@ int main(int argc, char** argv) {
         map_draw(&map, viewport);     // Draw map with viewport
         mario_draw(&mario, viewport); // Draw Mario with viewport
         // Update and draw enemies
+        static int enemy_counter = 0;
+        enemy_counter++;
+
         for (int i = 0; i < num_enemies; i++) {
-            enemy_update(&enemies[i], &map); // call n times per frame
+            if (enemy_counter % ENEMY_UPDATE_INTERVAL == 0) {
+                enemy_update(&enemies[i], &map);
+            }
             enemy_draw(&enemies[i], viewport);
         }
         refresh();

@@ -14,13 +14,14 @@ void enemy_update(enemy_t* e, map_t* map) {
     if (!e->alive) return;
 
     int next_x = e->x + e->direction;
+    int below_next_x = e->y + 1;
 
-    // Check bounds + walkable tile ahead
-    // if (!map_is_walkable(map, next_x, e->y) || !map_is_walkable(map, next_x, e->y + 1)) {
-    //     e->direction *= -1; // turn around
-    // } else {
+    // Check for wall ahead OR no ground ahead → turn around
+    if (!map_is_walkable(map, next_x, e->y) || map_is_walkable(map, next_x, below_next_x)) {
+        e->direction *= -1;  // turn around
+    } else {
         e->x += e->direction;
-    // }
+    }
 }
 
 void enemy_draw(enemy_t* e, coord_t viewport) {
