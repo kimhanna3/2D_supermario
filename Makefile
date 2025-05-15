@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -pedantic -std=c99
+CFLAGS = -Wall
 
 objects = main.o map.o mario.o util.o enemy.o
 
