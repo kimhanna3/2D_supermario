@@ -47,7 +47,7 @@ void map_free(map_t* map) {
 // Draws the map to the screen using the viewport as the top-left offset
 void map_draw(map_t* map, coord_t viewport) {
     for (size_t y = 0; y < map->height; y++){
-        for (size_t x = 0; x < map->width+1; x++){
+        for (size_t x = 0; x < map->width; x++){
             int screen_x = (x - viewport.x) * 2; // Horizontal scale factor for better visibility
             int screen_y = y - viewport.y;
             // Only draw if within visible screen area

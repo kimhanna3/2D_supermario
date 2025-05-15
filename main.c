@@ -218,7 +218,7 @@ int main(int argc, char** argv) {
             }
         }
         // Display current tile info
-        char tile_under_mario = map_get_tile(&map, mario.x, mario.y);
+        char tile_under_mario = map_get_tile(&map, mario.x, mario.y+1);
         mvprintw(0, 0, "Tile: %c (%d,%d)", map_get_tile(&map, mario.x, mario.y), mario.x, mario.y);
         // Level complete condition
         if (tile_under_mario == '*') {
