@@ -61,7 +61,7 @@ Avoid enemies (`E`) — colliding with one will trigger a game over screen.
 
 ## 🔧 How to Build
 
-Make sure you have the development version of `ncurses` and `SDL2` installed.
+Make sure you have the development version of `ncurses` installed.
 
 ### Compile the program:
 ```bash
@@ -70,4 +70,4 @@ make
 
 ### Run the Program:
 ```bash
-./mario level1.map
+./game level1.map
