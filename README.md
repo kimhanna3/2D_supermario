@@ -23,3 +23,13 @@ Guide Mario to the end of the level.
 The goal is represented by a `*` character at the far-right side of the level. Reach it to complete the level!
 
 Avoid enemies (`E`) — colliding with one will trigger a game over screen.
+
+---
+
+## 🔧 How to Build
+
+Make sure you have the development version of `ncurses` installed.
+
+### Compile the program:
+```bash
+make
