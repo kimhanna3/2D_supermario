@@ -1,4 +1,4 @@
-# Terminal Mario Platformer
+# Recreated SuperMario 2D
 
 A simple side-scrolling Mario-style platformer written in C using the `ncurses` library. The game runs in the terminal and features gravity, jumping, basic enemy movement, and level completion.
 
@@ -13,7 +13,7 @@ A simple side-scrolling Mario-style platformer written in C using the `ncurses` 
 - **Restart:** `R`
 
 📌 **Important:**  
-**Mouse input is not supported.** All interactions must be done using the keyboard.
+**Mouse input is not supported.** All inputs must be done using the keyboard.
 
 ---
 
@@ -28,33 +28,33 @@ Avoid enemies (`E`) — colliding with one will trigger a game over screen.
 
 ## Core Source Files
 
-- **main.c:** Contains the main loop that:
-  - Loads the level
+- **main.c:** 
+	- Loads the level
 	- Initializes Mario and enemies
-	-	Handles keyboard input
-	-	Updates the game state (movement, gravity, collisions)
-	-	Renders the viewport, characters, and status
+	- Handles keyboard input
+	- Updates the game state (movement, gravity, collisions)
+	- Renders the viewport, characters, and status
 
 - **map.c / map.h:** 
-  - Handles the level/map loading and drawing.
-	-	Reads the map from a .map file into memory
-	-	Converts the ASCII map into a playable area
-	-	Provides helpers for checking tile contents and drawing the map to the screen
+	- Handles the level/map loading and drawing.
+	- Reads the map from a .map file into memory
+	- Converts the ASCII map into a playable area
+	- Provides helpers for checking tile contents and drawing the map to the screen
 
 - **mario.c / mario.h:**
-	-	Draws Mario on screen
-	-	Handles gravity and jumping physics
-	-	Tracks position and vertical velocity
+	- Draws Mario on screen
+	- Handles gravity and jumping physics
+	- Tracks position and vertical velocity
 
 - **enemy.c / enemy.h:**
-  - Manages simple enemy behavior:
-	-	Enemies walk left and right
-	-	Enemies turn around when hitting edges or gaps
-	-	Enemies collide with Mario to trigger game over
+	- Manages simple enemy behavior:
+	- Enemies walk left and right
+	- Enemies turn around when hitting edges or gaps
+	- Enemies collide with Mario to trigger game over
 
 - **util.c / util.h:**
-  - Provides utility functions like:
-	-	Millisecond-level sleeping for controlling frame rate
+	- Provides utility functions like:
+	- Millisecond-level sleeping for controlling frame rate
 
 - **assets.h:** Defines symbolic characters used in the map (e.g., # for brick, = for ground, @ for Mario, * for goal).
 ---
