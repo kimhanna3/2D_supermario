@@ -4,15 +4,15 @@ A simple side-scrolling Mario-style platformer written in C using the `ncurses` 
 
 ---
 
-## How to Play
+## 🕹️ How to Play
 
 - **Move Left:** `←` arrow key or `A`
 - **Move Right:** `→` arrow key or `D`
 - **Jump:** `↑` arrow key or `Space`
 - **Quit Game:** `Q`
-- **Restart:** `R` 
+- **Restart:** `R`
 
-**Important:**  
+📌 **Important:**  
 **Mouse input is not supported.** All interactions must be done using the keyboard.
 
 ---
@@ -28,8 +28,13 @@ Avoid enemies (`E`) — colliding with one will trigger a game over screen.
 
 ## 🔧 How to Build
 
-Make sure you have the development version of `ncurses` installed.
+Make sure you have the development version of `ncurses` and `SDL2` installed.
 
 ### Compile the program:
 ```bash
 make
+```
+
+### Run the Program:
+```bash
+./mario level1.map
