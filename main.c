@@ -14,7 +14,7 @@
 #define ENEMY_UPDATE_INTERVAL 10
 
 enemy_t enemies[MAX_ENEMIES];
-int num_enemies = 1; // for now, just one
+int num_enemies = 3; // for now, just one
 
 // Returns true if Mario is standing on solid ground
 bool mario_on_ground(mario_t* m, map_t* map) {
@@ -69,8 +69,10 @@ int main(int argc, char** argv) {
     mario_draw(&mario, viewport);
     refresh();
 
-    // Place enemy
+    // Place enemies
     enemy_init(&enemies[0], 26, map.start.y, 1);
+    enemy_init(&enemies[1], 11, map.start.y - 2, 1);          
+    enemy_init(&enemies[2], 70, map.start.y, -1);         
 
     bool running = true;
     while (running) {
