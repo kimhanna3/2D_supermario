@@ -1,12 +1,13 @@
 #pragma once
 #include "map.h"
 
+// Structure representing Mario's state
 typedef struct {
-    int x, y;
-    int vy;           // vertical velocity
-    bool jumping;     // is currently jumping
-    int jump_frames;  // how many frames of jump remain
-    int jump_direction; // -1 for left, 1 for right, 0 for straight up
+    int x, y;             // Current position on the map (grid coordinates)
+    int vy;               // Vertical velocity (positive = falling, negative = jumping up)
+    bool jumping;         // True if Mario is currently in a jump
+    int jump_frames;      // Remaining frames of jump duration
+    int jump_direction;   // Direction of jump: -1 = left, 1 = right, 0 = straight up
 } mario_t;
 
 void mario_init(mario_t* m, int x, int y);

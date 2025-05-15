@@ -3,26 +3,19 @@
 #include <stddef.h>
 #include <stdbool.h>
 
+// Represents a coordinate (x, y) on the map
 typedef struct {
     int x;
     int y;
 } coord_t;
 
+// Represents the entire map structure
 typedef struct {
-    char** data; // 2D array of characters
-    size_t width;
-    size_t height;
-    coord_t start;
+    char** data;   // 2D array of characters
+    size_t width;  // Width of the map in characters
+    size_t height; // Height of the map in lines
+    coord_t start; // Starting coordinate for the player (e.g., Mario)
 } map_t;
-
-typedef enum {
-    CELL_EMPTY,
-    CELL_BRICK,
-    CELL_GROUND,
-    CELL_PIPE,
-    CELL_COIN,
-    CELL_GOAL
-} cell_t;
 
 bool map_load(const char* filename, map_t* map);
 void map_free(map_t* map);
